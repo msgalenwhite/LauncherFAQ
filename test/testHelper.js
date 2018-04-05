@@ -1,11 +1,15 @@
 import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
+import fetchMock from 'fetch-mock'
+import fetch from 'isomorphic-fetch'
 
 Object.assign(global, {
   mount,
   jasmineEnzyme,
-  React
+  React,
+  fetch,
+  fetchMock
 });
 
 beforeEach(() => {

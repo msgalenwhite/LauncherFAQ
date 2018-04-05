@@ -17,13 +17,25 @@ describe('LauncherShow', () => {
     4. Are functions doing what we want?
   */
 
-  //let wrapper;
+  let wrapper;
+  let sampleLauncher;
 
   beforeEach(() => {
-    jasmineEnzyme();
+    sampleLauncher = {
+      "name": "Sparkly Unicorn",
+      "id": 75,
+      "bio": "Unicorns always have the best time."
+    }
+
+    fetchMock.get('/api/v1/launcher/75', {
+      status: 200,
+      body: sampleLauncher
+    })
+
     wrapper = mount(
       <LauncherShow />
     )
   })
 
+  afterEach(fetchMock.restore)
 });
