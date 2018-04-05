@@ -96,11 +96,18 @@ describe('Question', () => {
     })
   })
 
-  xit ('should invoke the handleClick function from props when clicked', () => {
-    wrapper.simulate('click')
+  describe('handleClick', () => {
 
-    //WHY IS THIS NOT WORKING?
+    it ('should trigger when the icon is clicked', () => {
+      wrapper.find('i').simulate('click')
 
-    expect(onClick).toHaveBeenCalled()
+      expect(onClick).toHaveBeenCalled();
+    })
+
+    it ('should trigger when the h5 is clicked', () => {
+      wrapper.find('h5').simulate('click')
+
+      expect(onClick).toHaveBeenCalled();
+    })
   })
 })
