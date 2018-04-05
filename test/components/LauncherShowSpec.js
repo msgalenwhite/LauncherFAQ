@@ -1,4 +1,4 @@
-import LauncherShow from '../../src/components/LauncherShow'; //CHECK THIS!
+import LauncherShow from '../../src/components/LauncherShow';
 import { mount } from 'enzyme';
 import jasmineEnzyme from 'jasmine-enzyme';
 import React from 'react';
@@ -22,9 +22,9 @@ describe('LauncherShow', () => {
 
   beforeEach(() => {
     sampleLauncher = {
-      "name": "Sparkly Unicorn",
-      "id": 75,
-      "bio": "Unicorns always have the best time."
+      'name': 'Sparkly Unicorn',
+      'id': 75,
+      'bio': 'Unicorns always have the best time.'
     }
 
     fetchMock.get('/api/v1/launcher/75', {
@@ -38,4 +38,14 @@ describe('LauncherShow', () => {
   })
 
   afterEach(fetchMock.restore)
+
+  xit ('renders a page for an individual launcher', (done) => {
+    wrapper.setProps({ props: {params: {id: 75 }}})
+
+    setTimeout(() => {
+      expect(wrapper.find('h1')).toHaveText('Sparkly Unicorn')
+      expect(wrapper.find('p')).toHaveText('Unicorns always have the best time.')
+      done()
+    }, 0)
+  })
 });
