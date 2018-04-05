@@ -41,7 +41,4 @@ console.info(`TESTS RAN AT ${new Date().toLocaleTimeString()}`);
   - FAQContainer
 
 - Do I test main.js?
-
-
-
 */
