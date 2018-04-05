@@ -1,0 +1,46 @@
+{
+  "name": "launch-academy-faq-part-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
+    "test": "node_modules/.bin/karma start karma.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "~6.23.1",
+    "babel-loader": "~6.3.2",
+    "babel-preset-env": "~1.6.1",
+    "babel-preset-react": "~6.22.0",
+    "css-loader": "^0.26.2",
+    "enzyme": "~2.8.2",
+    "isparta-loader": "^2.0.0",
+    "jasmine-core": "~2.6.2",
+    "jasmine-enzyme": "~3.1.1",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-coverage": "~1.1.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-phantomjs-launcher": "~1.0.4",
+    "karma-sourcemap-loader": "~0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "~2.0.3",
+    "node-sass": "^4.5.0",
+    "phantomjs-prebuilt": "~2.1.14",
+    "react-addons-test-utils": "~15.5.1",
+    "react-test-renderer": "~15.5.4",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "webpack": "~2.3.1",
+    "webpack-dev-server": "~2.4.2",
+    "write-file-webpack-plugin": "^4.2.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2",
+    "react-router": "~3.2.0"
+  }
+}
