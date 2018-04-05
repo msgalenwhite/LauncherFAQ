@@ -16,6 +16,8 @@
     "babel-preset-react": "~6.22.0",
     "css-loader": "^0.26.2",
     "enzyme": "~2.8.2",
+    "fetch-mock": "^5.13.1",
+    "isomorphic-fetch": "^2.2.1",
     "isparta-loader": "^2.0.0",
     "jasmine-core": "~2.6.2",
     "jasmine-enzyme": "~3.1.1",
