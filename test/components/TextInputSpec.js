@@ -1,7 +1,4 @@
 import TextInput from '../../src/components/TextInput';
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
 
 describe('TextInput', () => {
   /*

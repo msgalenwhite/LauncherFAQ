@@ -1,7 +1,4 @@
 import FAQContainer from '../../src/containers/FAQContainer';
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
 
 describe('FAQContainer', () => {
   /*

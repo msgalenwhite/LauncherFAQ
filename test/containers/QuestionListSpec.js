@@ -1,8 +1,5 @@
 import QuestionList from '../../src/containers/QuestionList';
 import Question from '../../src/components/Question'
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
 
 describe('QuestionList', () => {
   /*

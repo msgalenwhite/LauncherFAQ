@@ -1,14 +1,11 @@
 import LauncherList from '../../src/components/LauncherList';
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
 
 describe('LauncherList', () => {
   /*
-    1. Is there state?
-    2. Is there fetch?
-    3. Are there props?
-    4. Are there child components?
+    1. Is there state? YES - launchers []
+    2. Is there fetch? YES - '/api/v1/launchers'
+    3. Are there props? NO
+    4. Are there child components? NO
 
     Important things to test:
     1. Are the correct html tags being rendered?
@@ -17,14 +14,13 @@ describe('LauncherList', () => {
     4. Are functions doing what we want?
   */
 
-  //let wrapper;
+  let wrapper;
 
-  //beforeEach(() => {
-  //  jasmineEnzyme();
-  //  wrapper = mount(
-  //    <LauncherList />
-  //  )
-  //})
+  beforeEach(() => {
+    wrapper = mount(
+      <LauncherList />
+    )
+  })
 
   it("correctly runs my sample test", () => {
     expect(true).toEqual(true)

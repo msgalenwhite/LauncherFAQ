@@ -1,7 +1,4 @@
 import LauncherShow from '../../src/components/LauncherShow';
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
 
 describe('LauncherShow', () => {
   /*

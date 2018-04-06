@@ -1,14 +1,12 @@
 import QuestionForm from '../../src/containers/QuestionForm';
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
+import TextInput from '../../src/components/TextInput'
 
 describe('QuestionForm', () => {
   /*
-    1. Is there state?
-    2. Is there fetch?
-    3. Are there props?
-    4. Are there child components?
+    1. Is there state? YES
+    2. Is there fetch? NO
+    3. Are there props? YES - submitNewQuestion()
+    4. Are there child components? YES - TextInput
 
     Important things to test:
     1. Are the correct html tags being rendered?
