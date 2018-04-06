@@ -1,7 +1,4 @@
-import App from '../../src/containers/App'; //CHECK THIS!
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
+import App from '../../src/containers/App';
 
 describe('App', () => {
   /*

@@ -1,7 +1,4 @@
-import LauncherShow from '../../src/components/LauncherShow'; //CHECK THIS!
-import { mount } from 'enzyme';
-import jasmineEnzyme from 'jasmine-enzyme';
-import React from 'react';
+import LauncherShow from '../../src/components/LauncherShow';
 
 describe('LauncherShow', () => {
   /*
@@ -17,13 +14,35 @@ describe('LauncherShow', () => {
     4. Are functions doing what we want?
   */
 
-  //let wrapper;
+  let wrapper;
+  let sampleLauncher;
 
   beforeEach(() => {
-    jasmineEnzyme();
+    sampleLauncher = {
+      'name': 'Sparkly Unicorn',
+      'id': 75,
+      'bio': 'Unicorns always have the best time.'
+    }
+
+    fetchMock.get('/api/v1/launcher/75', {
+      status: 200,
+      body: sampleLauncher
+    })
+
     wrapper = mount(
       <LauncherShow />
     )
   })
 
+  afterEach(fetchMock.restore)
+
+  xit ('renders a page for an individual launcher', (done) => {
+    wrapper.setProps({ props: {params: {id: 75 }}})
+
+    setTimeout(() => {
+      expect(wrapper.find('h1')).toHaveText('Sparkly Unicorn')
+      expect(wrapper.find('p')).toHaveText('Unicorns always have the best time.')
+      done()
+    }, 0)
+  })
 });

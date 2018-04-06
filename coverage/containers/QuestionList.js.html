@@ -20,32 +20,32 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">70.69% </span>
+        <span class="strong">98.28% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>41/58</span>
+        <span class='fraction'>57/58</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">83.78% </span>
+        <span class="strong">94.59% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>31/37</span>
+        <span class='fraction'>35/37</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76.92% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>10/13</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">23.53% </span>
+        <span class="strong">94.12% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/17</span>
+        <span class='fraction'>16/17</span>
       </div>
       <div class='fl pad1y'>
-        <span class="strong">7 statements, 4 functions, 16 branches</span>
+        <span class="strong">4 statements, 12 branches</span>
         <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -102,33 +102,33 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,7 +139,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,33 +153,33 @@
 import Question from '../components/Question';
 &nbsp;
 class QuestionList extends React.Component {
-<span class="fstat-no" title="function not covered" >  constructor(props)<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span></span></span>
+  constructor(props)<span class="branch-1 cbranch-no" title="branch not covered" >{</span>
     super(props)
-<span class="cstat-no" title="statement not covered" >    t</span>his.state = {
+    this.state = {
       selectedQuestion: null,
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    t</span>his.toggleQuestionSelect = this.toggleQuestionSelect.bind(this)
+    this.toggleQuestionSelect = this.toggleQuestionSelect.bind(this)
   }
 &nbsp;
   toggleQuestionSelect(id) {
-<span class="cstat-no" title="statement not covered" >    if (id === this.state.selectedQuestion) {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (id === this.state.selectedQuestion) {
 <span class="cstat-no" title="statement not covered" >      t</span>his.setState({ selectedQuestion: null})
     } else {
-<span class="cstat-no" title="statement not covered" >      t</span>his.setState({ selectedQuestion: id })
+      this.setState({ selectedQuestion: id })
     }
   }
 &nbsp;
-  render() <span class="cstat-no" title="statement not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >    l</span>et questions = this.props.questions.map(<span class="fstat-no" title="function not covered" >question =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      l</span>et selected;
-<span class="cstat-no" title="statement not covered" >      if (this.state.selectedQuestion === question.id) {</span>
-<span class="cstat-no" title="statement not covered" >        s</span>elected = true
+  render() {
+    let questions = this.props.questions.map(question =&gt; {
+      let selected;
+      if (this.state.selectedQuestion === question.id) {
+        selected = true
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      l</span>et handleClick = <span class="fstat-no" title="function not covered" >() =&gt; {</span> <span class="cstat-no" title="statement not covered" >t</span>his.toggleQuestionSelect(question.id) }
+      let handleClick = () =&gt; { this.toggleQuestionSelect(question.id) }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      r</span>eturn(
+      return(
         &lt;Question
           key={question.id}
           question={question.question}
@@ -190,7 +190,7 @@ class QuestionList extends React.Component {
       )
     })
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    r</span>eturn(
+    return(
       &lt;div className='question-list'&gt;
         {questions}
       &lt;/div&gt;
@@ -206,7 +206,7 @@ export default QuestionList;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 05 2018 14:12:39 GMT-0400 (EDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 06 2018 09:04:18 GMT-0400 (EDT)
 </div>
 </div>
 <script src="../prettify.js"></script>
