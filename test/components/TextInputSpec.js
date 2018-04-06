@@ -47,7 +47,8 @@ describe('TextInput', () => {
     })
   })
 
-  xit ('input field should trigger onChange when value changes', () => {
-    //how would I test an onChange listener?
+  it ('input field should trigger onChange when value changes', () => {
+    wrapper.find('input').simulate('change', event)
+    expect(onChange).toHaveBeenCalled()
   })
 });
