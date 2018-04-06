@@ -71,6 +71,16 @@ describe('QuestionList', () => {
       child.find('i').simulate('click')
       expect(wrapper).toHaveState('selectedQuestion', 75)
     })
+    it ('passes a different selected prop after child is clicked', () => {
+      let child = wrapper.find(Question)
+      child.find('i').simulate('click')
 
+      expect(wrapper.find(Question).props()).toEqual({
+        question: 'Are unicorns fluffy?',
+        answer: 'No.',
+        selected: true,
+        handleClick: jasmine.any(Function)
+      })
+    })
   })
 });
