@@ -47,9 +47,11 @@ describe('QuestionList', () => {
 
   it ('renders the correct components', () => {
     expect(wrapper.find('div').at(0)).toHaveProp('className', 'question-list')
-    expect(wrapper.find(Question).length).toEqual(1)
-    expect(wrapper.find(Question)).toBePresent()
-    expect(wrapper.find(Question).props()).toEqual({
+
+    let child = wrapper.find(Question)
+    expect(child).toBePresent()
+    expect(child.length).toEqual(1)
+    expect(child.props()).toEqual({
       question: 'Are unicorns fluffy?',
       answer: 'No.',
       selected: undefined,
@@ -58,8 +60,17 @@ describe('QuestionList', () => {
   })
 
   describe ("toggleQuestionSelect", () => {
-    it ('is passed to the child component')
-    it ('when a child component is clicked, it updates state with its id')
+
+    it ('should be triggered when a child component is clicked', () => {
+      wrapper.find(Question).props().handleClick()
+
+      expect(QuestionList.prototype.toggleQuestionSelect).toHaveBeenCalled()
+    })
+    it ('when a child component is clicked, it updates state with its id', () => {
+      let child = wrapper.find(Question)
+      child.find('i').simulate('click')
+      expect(wrapper).toHaveState('selectedQuestion', 75)
+    })
 
   })
 });
